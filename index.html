@@ -1,56 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <title>Pol Filtro Jurídico</title>
     <meta name="view-transition" content="same-origin">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Meta Tags Iniciais -->
+    <title>Personal Blog Template</title>
+    <meta name="title" content="Personal Blog Template">
+    <meta name="description" content="Esse é um template de blog pessoal">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./app/assets/images/favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
     <!-- =========== BOOTSTRAP CSS ============ -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 
     <!-- =========== BOOTSTRAP ICON CSS ============ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- =========== CSS ============ -->
-    <link rel="stylesheet" href="./app/assets/css/style.css">
-    <link rel="stylesheet" href="./app/components/navbar/navbar.css">
 
+    <!-- =========== CUSTOM CSS ============ -->
+    <link rel="stylesheet" href="./app/assets/css/style.css">
     <!-- =========== Importado junto com a rota ============ -->
     <link id="dynamic-css" rel="stylesheet" href="">
+
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="./app/assets/images/hero-banner.png">
+    <link rel="preload" as="image" href="./app/assets/images/pattern-2.svg">
+    <link rel="preload" as="image" href="./app/assets/images/pattern-3.svg">
+
 </head>
-<body id="pol-filtro-juridico">
 
-<div class="opacity-dark" id="loading-panel">
-    <div class="loading-panel">
-        <div id="spinner"></div>
+<body>
+
+    <!-- <div class="opacity-dark" id="loading-panel">
+        <div class="loading-panel">
+            <div id="spinner"></div>
+        </div>
     </div>
-</div>
 
-<h1>Personal Blog</h1>
+    <h1>Personal Blog</h1> -->
 
-<!--{*============ BOOTSTRAP JS ===========*}-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    <header class="header active" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./app/assets/images/logo.svg" width="119" height="37" alt="Blog Logo">
+            </a>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="navbar-top">
+                    <a href="#" class="logo">
+                        <img src="./app/assets/images/logo.svg" width="119" height="37" alt="Blog Logo">
+                    </a>
+
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#home" class="navbar-link" data-nav-toggler="">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#topics" class="navbar-link" data-nav-toggler="">Topics</a>
+                    </li>
+
+                    <li>
+                        <a href="#featured-post" class="navbar-link" data-nav-toggler="">Featured Post</a>
+                    </li>
+
+                    <li>
+                        <a href="#recent-post" class="navbar-link" data-nav-toggler="">Recent Post</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="navbar-link" data-nav-toggler="">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-bottom">
+
+                    <div class="profile-card">
+                        <img class="profile-banner" src="./app/assets/images/author-1.png" width="48" height="48"
+                            alt="Steven">
+
+                        <div>
+                            <p class="card-title">
+                                Hello Steven !
+                            </p>
+
+                            <p class="card-subtitle">
+                                You have 3 new messages
+                            </p>
+                        </div>
+                    </div>
+
+                    <ul class="link-list">
+                        <li>
+                            <a href="#" class="navbar-bottom-link hover-1">
+                                Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-bottom-link hover-1">
+                                Articles Saved
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-bottom-link hover-1">
+                                Add New Post
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="#" class="navbar-bottom-link hover-1">
+                                My Likes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-bottom-link hover-1">
+                                Account Setting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-bottom-link hover-1">
+                                Sign Out
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <p class="copyright-text">
+                    Copyright 2022 © Personal - Personal Blog Template.
+                    Developed by Strolker
+                </p>
+            </nav>
+            
+            <a href="#" class="btn btn-primary">Subscribe</a>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler="">
+                <i aria-hidden="true" name="close-outline" class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <!--{*============ BOOTSTRAP JS ===========*}-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-</script>
+        </script>
 
+    <!--============ JQUERY ===========-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
 
-<!--============ JQUERY ===========-->
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous">
-</script>
+    <!--{*============ MAIN ===========*}-->
+    <script src="./app/assets/js/main.js" type="module"></script>
 
-<!--{*============ MAIN ===========*}-->
-<script src="./app/assets/js/main.js" type="module"></script>
+    <!--{*============ CUSTOM JS ===========*}-->
+    <script src="./app/assets/js/script.js" type="module"></script>
 
-<!--{*============ CUSTOM JS ===========*}-->
+    <!--{*============ IonIcon Link ===========*}-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<!--{*============ SWEET ALERT ===========*}-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" charset="ISO-8859-1"></script>
+    <!--{*============ SWEET ALERT ===========*}-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" charset="ISO-8859-1"></script>
 
 </body>
+
 </html>
